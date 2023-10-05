@@ -22,7 +22,8 @@ func _input(event):
 		target.x += event.relative.x
 
 func hit(_ball):
-	pass
+	var Paddle_Sound = get_node("/root/Game/Paddle_Sound")
+	Paddle_Sound.play()
 
 func powerup(payload):
 	for c in $Powerups.get_children():

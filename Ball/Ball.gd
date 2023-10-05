@@ -18,7 +18,7 @@ func _ready():
 		var level = Levels.levels[Global.level]
 		min_speed *= level["multiplier"]
 		max_speed *= level["multiplier"]
-	
+
 
 func _on_Ball_body_entered(body):
 	if body.has_method("hit"):
@@ -51,6 +51,7 @@ func _integrate_forces(state):
 func change_size(s):
 	$ColorRect.scale = s
 	$CollisionShape2D.scale = s
+
 
 func change_speed(s):
 	speed_multiplier = s
