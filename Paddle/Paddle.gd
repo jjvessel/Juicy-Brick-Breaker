@@ -24,6 +24,7 @@ func _input(event):
 func hit(_ball):
 	var Paddle_Sound = get_node("/root/Game/Paddle_Sound")
 	Paddle_Sound.play()
+	$Confetti.emitting = true
 
 func powerup(payload):
 	for c in $Powerups.get_children():

@@ -6,10 +6,13 @@ func _ready():
 	Ball = load("res://Ball/Ball.tscn")
 	make_ball()
 
+
 func _physics_process(_delta):
 	if get_child_count() == 0:
 		Global.update_lives(-1)
-		Global.update_fever(-Global.fever)
+		var camera = get_node_or_null("/root/Game/Camera")
+		if camera != null:
+			camera.add_trauma(3.0)
 		make_ball()
 
 func make_ball():

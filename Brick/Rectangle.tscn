@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq2le3ss0prch"]
+
+[ext_resource type="Script" path="res://Brick/Brick.gd" id="1_xmuur"]
+[ext_resource type="Texture2D" uid="uid://cwrr8txtri4vb" path="res://Assets/png/element_red_rectangle_glossy.png" id="2_o2oyy"]
+
+[node name="Rectangle" type="StaticBody2D"]
+script = ExtResource("1_xmuur")
+
+[node name="Brick" type="Sprite2D" parent="."]
+texture = ExtResource("2_o2oyy")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(32, 16, -32, 16, -32, -16, 32, -16)

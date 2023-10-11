@@ -13,7 +13,7 @@ func _ready():
 		var Brick_Container = get_node_or_null("/root/Game/Brick_Container")
 		Global.time = level["timer"]
 		if Brick_Container != null:
-			var Brick = load("res://Brick/Brick.tscn")
+			var Brick = load("res://Brick/Rectangle.tscn")
 			for rows in range(len(layout)):
 				for cols in range(len(layout[rows])):
 					if layout[rows][cols] > 0:
